@@ -12,7 +12,7 @@ class Cardnews extends HTMLElement{
     componentRoot.setAttribute("class","card");
 
     const cardLeft = document.createElement("div");
-    cardLeft.setAttribute("class","card_lef");
+    cardLeft.setAttribute("class","card_left");
 
     const autor = document.createElement("span");
     autor.textContent = "By " + (this.getAttribute("autor") || "Anonymous");
@@ -32,7 +32,8 @@ class Cardnews extends HTMLElement{
     cardRight.setAttribute("class","card_right");
 
     const newsImage = document.createElement("img");
-    newsImage.src = "assents/Darth-Vader.png" 
+    newsImage.src = this.getAttribute("photo")|| "assents/default-1.jpg"; 
+    newsImage.alt = "foto do autor";
 
     cardRight.appendChild(newsImage);
 
@@ -50,6 +51,7 @@ styles(){
     
         .card{
           width: 80%;
+          margin-top:8px;
           border: 1px solid gray;
           box-shadow: 9px 9px 27px 0px black;
           -webkit-box-shadow: 9px 9px 27px 0px black;
@@ -71,12 +73,15 @@ styles(){
 
         }
 
-        .card_left > h1{
-          margin-top: 25px;
+        .card_left> a{
+          margin-top: 15px;
           font-size: 25px;
+          color: black;
+          text-decoration: none;
+          font-weight: bold;
         }
         .card_left>p{ 
-        color: gray;
+        color:gray;
         }
 
     
