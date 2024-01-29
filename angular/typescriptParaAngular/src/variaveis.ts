@@ -1,8 +1,8 @@
 // variaveis tipo primitivas 
 
 let ligado :boolean = false;
-let nome : string = "";
-let idade : number = 0;
+let nome : string = "john";
+let idade : number = 1 ;
 
 /// variaveis especias
 

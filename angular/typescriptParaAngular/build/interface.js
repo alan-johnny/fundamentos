@@ -21,5 +21,5 @@ class Pessoa {
         return ` Hello ${this.name}`;
     }
 }
-const p = new Pessoa(2, "marcos ");
+const p = new Pessoa(2, "marcos");
 console.log(p.sayHello());
